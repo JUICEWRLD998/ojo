@@ -18,6 +18,12 @@ AUSD signs under `Agora Dollar` / `1`, USDC under `USDC` / `2`. The wallet and r
 per-token config, never share one constant. `name()` is not the domain name for AUSD (`name()` returns `AUSD`).
 Evidence: spike 1.
 
+## 2026-10-05: The MC console reads `monadNewHeads` and `monadLogs`, and waits for `Finalized`
+
+Monad's own subscriptions carry `commitState`. The wall shows a note at `Proposed` (greyed) and the MC console calls
+the name at `Finalized`. Spike 2 measured `Proposed` to `Finalized` at p50 280 ms but p95 1629 ms, so the Phase 3 exit
+target "p95 under 1 s" is not safe as written: re-measure with a real spray before promising it on a slide.
+
 ## 2026-10-05: Routing is bound by the guest's own signature
 
 The ERC-3009 nonce is `keccak256(abi.encode(id, recipientIdx, label, salt))`. A relayer cannot redirect a note to
