@@ -1,0 +1,12 @@
+{
+  "chainId": 10143,
+  "network": "Monad testnet",
+  "note": "Mock tokens: testnet has no AUSD or USDC. Never use these on mainnet.",
+  "deployer": "0x55C50E5917014B51dF463B1cDE7Fa6E34Ae20488",
+  "contracts": {
+    "MockAUSD (name 'Agora Dollar', v1)": { "address": "0x1cbe3da83f7aae5bfe8354fe2d6f5c764e2e2e4e", "tx": "0x898b5b9e30a683265262bbcb1f197c316359215b51f3ca9f8d69b73fe3038287" },
+    "MockUSDC (name 'USD Coin', v1)": { "address": "0x888c55939437ecd57a18e2adc50d6081ba83976d", "tx": "0x806d5aeacddd63fe877daef42ce0a5a021dddd6f608098904afa5b1f742fb8ea" },
+    "OjoParty": { "address": "0x5f0dca374adb128fcf77c5d6fff89945fa616ea8", "tx": "0xca933e6b9a31cc53f895a0104a11fb06806de553d81afb6ff3ef924ae18f1bbc", "sourcify": "match" },
+    "BundleDesk": { "address": "0x16b24aa178327ac03eab1895f3605bc1125d2801", "tx": "0x71707e36ccaa2ffe81334efba8b500cede1cb8ef363e24954f1d8697d1bc6439", "sourcify": "match" }
+  }
+}
