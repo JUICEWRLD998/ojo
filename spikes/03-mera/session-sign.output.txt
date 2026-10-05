@@ -1,0 +1,4 @@
+address 0xc315C9eaDD70d187DFE8742F6d3C3bCDC7987447 source mera
+signed and verified 5/5 notes from one session in 135 ms
+tampered message verifies (must be false): false
+after end(): refused, code = SESSION_ENDED

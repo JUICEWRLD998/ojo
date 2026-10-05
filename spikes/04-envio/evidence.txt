@@ -1,0 +1,8 @@
+# Spike 4: Envio on Monad (checked 2026-10-05T13:00Z)
+
+Docs page: https://docs.envio.dev/docs/HyperIndex/supported-networks
+Row found in page HTML:
+<tr><td>Monad</td><td>143</td><td><a href="https://143.hypersync.xyz" target="_blank" rel="noopener noreferrer">https://143.hypersync.xyz</a></td><td><a href="https://143.rpc.hypersync.xyz" 
+
+HyperSync height (https://143.hypersync.xyz/height): {"height":110758608}
+RPC height  (cast block-number rpc.monad.xyz):       110758614
