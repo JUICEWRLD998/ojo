@@ -12,8 +12,8 @@ remappings = [
 ]
 
 [rpc_endpoints]
-monad = "https://rpc.monad.xyz"
-monad_testnet = "https://testnet-rpc.monad.xyz"
+ojo_monad = "https://rpc.monad.xyz"
+ojo_monad_testnet = "https://testnet-rpc.monad.xyz"
 
 [fuzz]
 runs = 256
