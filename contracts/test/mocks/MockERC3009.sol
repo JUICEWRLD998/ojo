@@ -44,9 +44,8 @@ contract MockERC3009 is ERC20, EIP712 {
         require(block.timestamp < validBefore, "authorization is expired");
         require(!authorizationState[from][nonce], "authorization is used");
 
-        bytes32 structHash = keccak256(
-            abi.encode(RECEIVE_WITH_AUTHORIZATION_TYPEHASH, from, to, value, validAfter, validBefore, nonce)
-        );
+        bytes32 structHash =
+            keccak256(abi.encode(RECEIVE_WITH_AUTHORIZATION_TYPEHASH, from, to, value, validAfter, validBefore, nonce));
         address signer = ECDSA.recover(_hashTypedDataV4(structHash), v, r, s);
         require(signer == from, "invalid signature");
 

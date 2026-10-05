@@ -51,7 +51,9 @@ contract OjoPartyTest is Helpers {
     function _recips(uint256 n) internal view returns (address[] memory r) {
         address[3] memory all = [celebrant, bride, groom];
         r = new address[](n);
-        for (uint256 i = 0; i < n; i++) r[i] = all[i];
+        for (uint256 i = 0; i < n; i++) {
+            r[i] = all[i];
+        }
     }
 
     function _createSig(bytes32 id, address token, address[] memory recips, uint64 closesAt, uint16 mask, uint256 key)
@@ -60,15 +62,15 @@ contract OjoPartyTest is Helpers {
         returns (bytes memory)
     {
         bytes32 sh = keccak256(
-            abi.encode(
-                party.CREATE_PARTY_TYPEHASH(), id, token, keccak256(abi.encodePacked(recips)), closesAt, mask
-            )
+            abi.encode(party.CREATE_PARTY_TYPEHASH(), id, token, keccak256(abi.encodePacked(recips)), closesAt, mask)
         );
         return _sig(key, _digest(partyDomain, sh));
     }
 
     function _create(bytes32 id, address token, address[] memory recips, uint64 closesAt, uint16 mask) internal {
-        party.createParty(id, host, token, recips, closesAt, mask, _createSig(id, token, recips, closesAt, mask, hostKey));
+        party.createParty(
+            id, host, token, recips, closesAt, mask, _createSig(id, token, recips, closesAt, mask, hostKey)
+        );
     }
 
     function _defaultParty(bytes32 id, uint256 nRecips) internal returns (uint64 closesAt) {
@@ -145,7 +147,9 @@ contract OjoPartyTest is Helpers {
         party.createParty(ID, host, address(usdc), none, closesAt, ALL, s0);
 
         address[] memory nine = new address[](9);
-        for (uint256 i = 0; i < 9; i++) nine[i] = address(uint160(0x1000 + i));
+        for (uint256 i = 0; i < 9; i++) {
+            nine[i] = address(uint160(0x1000 + i));
+        }
         bytes memory s9 = _createSig(ID, address(usdc), nine, closesAt, ALL, hostKey);
         vm.expectRevert(OjoParty.TooManyRecipients.selector);
         party.createParty(ID, host, address(usdc), nine, closesAt, ALL, s9);
@@ -246,7 +250,9 @@ contract OjoPartyTest is Helpers {
             party.spray(ID, idx, LABEL, i, _mkAuth(ID, idx, LABEL, i, value));
             sum += value;
         }
-        assertEq(usdc.balanceOf(celebrant) + usdc.balanceOf(bride) + usdc.balanceOf(groom), sum, "recipients got every note");
+        assertEq(
+            usdc.balanceOf(celebrant) + usdc.balanceOf(bride) + usdc.balanceOf(groom), sum, "recipients got every note"
+        );
         assertEq(usdc.balanceOf(guest), 100_000e6 - sum, "guest paid exactly the notes");
         assertEq(usdc.balanceOf(address(party)), 0, "contract balance stays 0");
         assertEq(party.getParty(ID).total, sum, "total tracks notes");

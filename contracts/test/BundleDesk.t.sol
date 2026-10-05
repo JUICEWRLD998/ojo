@@ -29,9 +29,7 @@ contract BundleDeskTest is Helpers {
 
     event Deposited(address indexed vendor, address indexed token, uint256 amount);
     event Withdrawn(address indexed vendor, address indexed token, uint256 amount);
-    event Claimed(
-        address indexed vendor, address indexed to, address indexed token, uint256 amount, address voucher
-    );
+    event Claimed(address indexed vendor, address indexed to, address indexed token, uint256 amount, address voucher);
 
     function setUp() public {
         vm.warp(1_000_000);
@@ -60,8 +58,7 @@ contract BundleDeskTest is Helpers {
 
     function _vDigest(V memory v) internal view returns (bytes32) {
         return _digest(
-            deskDomain,
-            keccak256(abi.encode(desk.VOUCHER_TYPEHASH(), v.vendor, v.token, v.amount, v.voucher, v.expiry))
+            deskDomain, keccak256(abi.encode(desk.VOUCHER_TYPEHASH(), v.vendor, v.token, v.amount, v.voucher, v.expiry))
         );
     }
 
@@ -74,7 +71,9 @@ contract BundleDeskTest is Helpers {
     }
 
     function _claim(V memory v, address to) internal {
-        desk.claim(v.vendor, v.token, v.amount, v.voucher, v.expiry, to, _vendorSig(v, vendorKey), _claimSig(v, to, voucherKey));
+        desk.claim(
+            v.vendor, v.token, v.amount, v.voucher, v.expiry, to, _vendorSig(v, vendorKey), _claimSig(v, to, voucherKey)
+        );
     }
 
     // ---------- deposit / withdraw ----------
@@ -167,7 +166,8 @@ contract BundleDeskTest is Helpers {
         w.voucher = vm.addr(0x70D);
         w.expiry = block.timestamp + 10;
         bytes memory ws = _vendorSig(w, vendorKey);
-        bytes memory wc = _sig(0x70D, _digest(deskDomain, keccak256(abi.encode(desk.CLAIM_TYPEHASH(), _vDigest(w), guest))));
+        bytes memory wc =
+            _sig(0x70D, _digest(deskDomain, keccak256(abi.encode(desk.CLAIM_TYPEHASH(), _vDigest(w), guest))));
         vm.warp(w.expiry + 1);
         vm.expectRevert(BundleDesk.Expired.selector);
         desk.claim(w.vendor, w.token, w.amount, w.voucher, w.expiry, guest, ws, wc);

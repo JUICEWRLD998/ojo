@@ -147,9 +147,8 @@ contract OjoParty is EIP712 {
         address token = p.token;
 
         p.total += a.value;
-        IERC3009(token).receiveWithAuthorization(
-            a.from, address(this), a.value, a.validAfter, a.validBefore, nonce, a.v, a.r, a.s
-        );
+        IERC3009(token)
+            .receiveWithAuthorization(a.from, address(this), a.value, a.validAfter, a.validBefore, nonce, a.v, a.r, a.s);
         IERC20(token).safeTransfer(recipient, a.value);
 
         emit Sprayed(id, a.from, recipient, a.value, label, nonce);

@@ -47,6 +47,8 @@ abstract contract Helpers is Test {
         bytes32 structHash =
             keccak256(abi.encode(RWA_TYPEHASH, from, q.to, q.value, q.validAfter, q.validBefore, q.nonce));
         (uint8 v, bytes32 r, bytes32 s) = vm.sign(q.key, _digest(q.tokenDomain, structHash));
-        a = OjoParty.Auth({from: from, value: q.value, validAfter: q.validAfter, validBefore: q.validBefore, v: v, r: r, s: s});
+        a = OjoParty.Auth({
+            from: from, value: q.value, validAfter: q.validAfter, validBefore: q.validBefore, v: v, r: r, s: s
+        });
     }
 }
