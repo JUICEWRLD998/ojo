@@ -16,6 +16,8 @@ a claim yet.
 | `eth_getBlockByNumber` also accepts `safe` and `finalized` tags | Verified live 2026-10-05 | `cast block safe`, `cast block finalized` |
 | Block-level delay after first sight (`Proposed`): to `Finalized` p50 280 ms, p95 1629 ms, max 4528 ms; to `Verified` p50 1522 ms. One 60 s run, 170 blocks, client-side arrival times from one machine | Measured, single run | `spikes/02-finality/measure.output.txt` |
 | Flick-to-log latency of a real spray (signed note to `Sprayed` log, p50 / p95) | Open | needs a funded relayer key and a deployed contract, Phase 2 |
-| Mera creates an account and signs twice with one prompt | Open | spike 3 |
-| Envio HyperIndex supports chainId 143 | Open | spike 4 |
-| Gas per `spray`, and its cost in cents | Open | spike 5 |
+| Mera `@category-labs/mera` 0.2.0 API for our flow: `createSecretVaultWithNewPasskey` (one passkey prompt, plus a second on authenticators without PRF at creation), `decryptSecretVaultWithPasskey` (one prompt), `createSecp256k1SigningSession`, `toViemAccount` from `@category-labs/mera/viem` | Verified by reading the shipped `.d.ts` | `spikes/03-mera/node_modules/@category-labs/mera/dist/*.d.ts` (install with `npm i`) |
+| A Mera session signs repeated EIP-712 `ReceiveWithAuthorization` messages with no prompt; signatures verify with viem; a tampered message fails; signing after `end()` throws `SESSION_ENDED` | Verified in Node, 5/5 | `spikes/03-mera/session-sign.output.txt` |
+| Mera creates a passkey account on a real iPhone (Safari) and Android (Chrome) | Open, needs a phone | device matrix not yet recorded |
+| Envio HyperIndex lists Monad mainnet (chainId 143) with a live HyperSync endpoint `https://143.hypersync.xyz` (height 110758608 vs RPC 110758614) | Verified live 2026-10-05 | `spikes/04-envio/evidence.txt`. Not yet run: an actual indexer |
+| Cost per spray is about 0.08 to 0.10 US cents (0.80 to 0.97 USD per 1,000), at 102 gwei and MON 0.0315 USD | Estimate. Token-call gas is measured, the other 87,000 gas is assumed until `OjoParty` exists | `spikes/05-gas/estimate.txt` |
