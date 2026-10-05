@@ -1,0 +1,31 @@
+{
+  "seconds": 60,
+  "blocksSeen": 170,
+  "statesObserved": [
+    "Finalized",
+    "Verified",
+    "Voted",
+    "Proposed"
+  ],
+  "deltasMs": {
+    "Proposed->Voted": {
+      "n": 164,
+      "p50": "129",
+      "p95": "1202",
+      "max": "4374"
+    },
+    "Proposed->Finalized": {
+      "n": 163,
+      "p50": "280",
+      "p95": "1629",
+      "max": "4528"
+    },
+    "Proposed->Verified": {
+      "n": 160,
+      "p50": "1522",
+      "p95": "3552",
+      "max": "4995"
+    }
+  },
+  "blocksWithoutProposed": 5
+}
