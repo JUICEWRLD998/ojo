@@ -1,0 +1,35 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 2.58s
+Compiler run successful!
+
+Ran 2 tests for test/Erc3009.t.sol:Erc3009Spike
+[PASS] test_ausd() (gas: 748635)
+Logs:
+  AUSD
+    token         : 0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a
+    name()        : AUSD
+    eip712 name   : Agora Dollar
+    eip712 version: 1
+    chainId       : 143
+    separator     : 0x995063441ebf2219c94dce05014a545da4390d2362f99b3d7ad456046678cafe
+    matches local recompute: true
+    pull gas (token call only): 137694
+    PASS: balance moved, replay reverts, wrong-nonce reverts
+
+[PASS] test_usdc() (gas: 952134)
+Logs:
+  USDC domain name that matches on-chain separator: USDC
+  USDC
+    token         : 0x754704Bc059F8C67012fEd69BC8A327a5aafb603
+    name()        : USDC
+    eip712 name   : USDC
+    eip712 version: 2
+    chainId       : 143
+    separator     : 0xfe22123edc0dd4aeb912eb7948c5f0e531592c2053b3067612f427db342c93c6
+    matches local recompute: true
+    pull gas (token call only): 187789
+    PASS: balance moved, replay reverts, wrong-nonce reverts
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 5.18s (4.23s CPU time)
+
+Ran 1 test suite in 8.17s (5.18s CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
