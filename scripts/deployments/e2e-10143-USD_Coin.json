@@ -1,0 +1,26 @@
+{
+  "chainId": 10143,
+  "party": "0x5F0DcA374ADb128FcF77c5d6FfF89945fa616Ea8",
+  "token": "0x888C55939437ECD57A18E2Adc50D6081BA83976d",
+  "partyId": "0x8fcb1a51986b503ac1159aba2d185e2043026226816be7a5065efba0f98e96ad",
+  "recipient": "0x7163499baea9FFeB9B90DB33a20788194fddd782",
+  "guest": "0xAd3C3396ec39962ee42853fddc6B26C54abFF287",
+  "txs": {
+    "createParty": "0xc6a9d22fdf348a1bd348c52dfd7df9377b105e49e7e213dbf5f5cbb58b64bd6d",
+    "spray": "0xf1765e6a2f4cb79e1633f4914e746561cb9eecf70ad02676fb13fa7dc0f05ed5",
+    "closeParty": "0x1ce96dd56e90b5cf0ad86126cc28232f68e73ee3bbe888125221010c12dc8123"
+  },
+  "sprayGasUsed": "320000",
+  "sprayGasLimit": "320000",
+  "sendToReceiptMs": 1643,
+  "checks": {
+    "sprayedEvent": true,
+    "recipientGotNote": true,
+    "guestPaidNote": true,
+    "partyHoldsNothing": true,
+    "partyTotal": true,
+    "replayReverts": true,
+    "partyClosed": true
+  },
+  "ok": true
+}
