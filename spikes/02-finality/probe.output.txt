@@ -1,0 +1,254 @@
+{"label":"newHeads","accepted":true,"result":"0x18dba33bc6bf6ec600000000000cc053"}
+{"label":"monadNewHeads","accepted":true,"result":"0xce767d03ebe8f8fd5836a4947a45d993"}
+{"label":"logs","accepted":true,"result":"0x3cb71f1bd157cb0a5bcab7db224ed156"}
+{"label":"monadLogs","accepted":true,"result":"0xfc40b104492f830582e30d71199395e0"}
+{
+ "label": "newHeads",
+ "sample": [
+  {
+   "number": "0x69a049f",
+   "timestamp": "0x6ac39d92",
+   "hash": "0x5fbf39a1b72dddd616bdfb2b03cb63532b6bc1520d9892476b8d2c0963286f67",
+   "keys": [
+    "hash",
+    "miner",
+    "difficulty",
+    "number",
+    "gasLimit",
+    "gasUsed",
+    "timestamp",
+    "extraData",
+    "nonce",
+    "baseFeePerGas",
+    "blobGasUsed",
+    "excessBlobGas",
+    "totalDifficulty",
+    "size"
+   ]
+  },
+  {
+   "number": "0x69a04a0",
+   "timestamp": "0x6ac39d92",
+   "hash": "0xa4fd4a18b24b63a4c1e6c3812ead609ad3fffa2daf54d3a7659d8bc57006f2b2",
+   "keys": [
+    "hash",
+    "miner",
+    "difficulty",
+    "number",
+    "gasLimit",
+    "gasUsed",
+    "timestamp",
+    "extraData",
+    "nonce",
+    "baseFeePerGas",
+    "blobGasUsed",
+    "excessBlobGas",
+    "totalDifficulty",
+    "size"
+   ]
+  },
+  {
+   "number": "0x69a04a1",
+   "timestamp": "0x6ac39d92",
+   "hash": "0x4b7fb5b8dfe5bde1e6d103ae72b8a3303d3fd282e06cad1dacc0d76f98adde28",
+   "keys": [
+    "hash",
+    "miner",
+    "difficulty",
+    "number",
+    "gasLimit",
+    "gasUsed",
+    "timestamp",
+    "extraData",
+    "nonce",
+    "baseFeePerGas",
+    "blobGasUsed",
+    "excessBlobGas",
+    "totalDifficulty",
+    "size"
+   ]
+  }
+ ]
+}
+{
+ "label": "monadNewHeads",
+ "sample": [
+  {
+   "number": "0x69a049e",
+   "timestamp": "0x6ac39d91",
+   "hash": "0x5b92f0896e011e99f86c98c09e036376838a813626316fbe9119ad70079cdba1",
+   "keys": [
+    "blockId",
+    "commitState",
+    "hash",
+    "miner",
+    "difficulty",
+    "number",
+    "gasLimit",
+    "gasUsed",
+    "timestamp",
+    "extraData",
+    "nonce",
+    "baseFeePerGas",
+    "blobGasUsed",
+    "excessBlobGas",
+    "totalDifficulty",
+    "size"
+   ]
+  },
+  {
+   "number": "0x69a049b",
+   "timestamp": "0x6ac39d90",
+   "hash": "0x82db235d9ed1309378c447c8560b74f7044b12fb7b728041e84ec0bbd82bc84a",
+   "keys": [
+    "blockId",
+    "commitState",
+    "hash",
+    "miner",
+    "difficulty",
+    "number",
+    "gasLimit",
+    "gasUsed",
+    "timestamp",
+    "extraData",
+    "nonce",
+    "baseFeePerGas",
+    "blobGasUsed",
+    "excessBlobGas",
+    "totalDifficulty",
+    "size"
+   ]
+  },
+  {
+   "number": "0x69a049f",
+   "timestamp": "0x6ac39d92",
+   "hash": "0x5fbf39a1b72dddd616bdfb2b03cb63532b6bc1520d9892476b8d2c0963286f67",
+   "keys": [
+    "blockId",
+    "commitState",
+    "hash",
+    "miner",
+    "difficulty",
+    "number",
+    "gasLimit",
+    "gasUsed",
+    "timestamp",
+    "extraData",
+    "nonce",
+    "baseFeePerGas",
+    "blobGasUsed",
+    "excessBlobGas",
+    "totalDifficulty",
+    "size"
+   ]
+  }
+ ]
+}
+{
+ "label": "logs",
+ "sample": [
+  {
+   "address": "0x0000000000000000000000000000000000001000",
+   "topics": [
+    "0x3a420a01486b6b28d6ae89c51f5c3bde3e0e74eecbb646a0c481ccba3aae3754",
+    "0x0000000000000000000000000000000000000000000000000000000000000045",
+    "0x0000000000000000000000006f49a8f621353f12378d0046e7d7e4b9b249dc9e"
+   ],
+   "data": "0x000000000000000000000000000000000000000000000000d45484efe77a000000000000000000000000000000000000000000000000000000000000000008a8",
+   "blockHash": "0xa4fd4a18b24b63a4c1e6c3812ead609ad3fffa2daf54d3a7659d8bc57006f2b2",
+   "blockNumber": "0x69a04a0",
+   "blockTimestamp": "0x6ac39d92",
+   "transactionHash": "0xe3ee26f48a0a88f719bcc0e6cf73b0765cf656021a00be042f418d513ffbbea7",
+   "transactionIndex": "0x0",
+   "logIndex": "0x0",
+   "removed": false
+  },
+  {
+   "address": "0xc8689a475b9d2cc5a21270842f5867a2d762ee79",
+   "topics": [
+    "0xf89807ced38024bde6db7e61a577b3a35d64d7209c83cb0fa4eefdf1f01da607",
+    "0x00000000000000000000000037db7fbf671c3de8f6beafbdfc6e6633353eec7b",
+    "0xc65c161ec22dc40634b59f1d1e7595fb79982241311a723405d2c6aca59b32d0"
+   ],
+   "data": "0x000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000577ef000000000000000000000000000000000000000000000000000000006ac39d9400000000000000000000000000000000000000000000000000000000000000074c49542d55534400000000000000000000000000000000000000000000000000",
+   "blockHash": "0xa4fd4a18b24b63a4c1e6c3812ead609ad3fffa2daf54d3a7659d8bc57006f2b2",
+   "blockNumber": "0x69a04a0",
+   "blockTimestamp": "0x6ac39d92",
+   "transactionHash": "0x0edd2113ec5b2bc1f280ff27782fd9da3780be2253a7e23e0c95d876c947117e",
+   "transactionIndex": "0x1",
+   "logIndex": "0x1",
+   "removed": false
+  },
+  {
+   "address": "0x37db7fbf671c3de8f6beafbdfc6e6633353eec7b",
+   "topics": [
+    "0xe4bf47b816265d25cc3d5733630bbe2c88469632660eeec6e227b6b2906ba01c",
+    "0x000000000000000000000000000000000000000000000000000000000000003c"
+   ],
+   "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d2000000000000000000000000000000000000000000000000000000000005f834000000000000000000000000000000000000000000000000000000000005f7e100000000000000000000000000000000000000000000000000000000000009f900000000000000000000000000000000000000000000000000000000000009f9",
+   "blockHash": "0xa4fd4a18b24b63a4c1e6c3812ead609ad3fffa2daf54d3a7659d8bc57006f2b2",
+   "blockNumber": "0x69a04a0",
+   "blockTimestamp": "0x6ac39d92",
+   "transactionHash": "0x0edd2113ec5b2bc1f280ff27782fd9da3780be2253a7e23e0c95d876c947117e",
+   "transactionIndex": "0x1",
+   "logIndex": "0x2",
+   "removed": false
+  }
+ ]
+}
+{
+ "label": "monadLogs",
+ "sample": [
+  {
+   "blockId": "0xa46e8b90713950b06abca9588d2e3a5c7e1b3c2b7af5ad9672785c9f9bf14484",
+   "commitState": "Finalized",
+   "address": "0x0000000000000000000000000000000000001000",
+   "topics": [
+    "0x3a420a01486b6b28d6ae89c51f5c3bde3e0e74eecbb646a0c481ccba3aae3754",
+    "0x0000000000000000000000000000000000000000000000000000000000000017",
+    "0x0000000000000000000000006f49a8f621353f12378d0046e7d7e4b9b249dc9e"
+   ],
+   "data": "0x000000000000000000000000000000000000000000000000d45484efe77a000000000000000000000000000000000000000000000000000000000000000008a8",
+   "blockHash": "0x5fbf39a1b72dddd616bdfb2b03cb63532b6bc1520d9892476b8d2c0963286f67",
+   "blockNumber": "0x69a049f",
+   "blockTimestamp": "0x6ac39d92",
+   "transactionHash": "0xcbf3dbecb3ea12f18870cfff7cd731c02fd72b122171ed14cf8b44d14ccbea53",
+   "transactionIndex": "0x0",
+   "logIndex": "0x0",
+   "removed": false
+  },
+  {
+   "blockId": "0xa46e8b90713950b06abca9588d2e3a5c7e1b3c2b7af5ad9672785c9f9bf14484",
+   "commitState": "Finalized",
+   "address": "0x80c74517bcc2d67ffe02d3ed886796272f647210",
+   "topics": [
+    "0x4297642da60dca19aa6bb6cee38e85c2c07cb520fe9513b94877a68ed0a61962",
+    "0x00000000000000000000000000000000000000000000000000000000069a049f"
+   ],
+   "data": "0x0000000000000000000000000000000000000000000000000000000000007943000000000000000000000000000000000000000000000000000000000000ffff",
+   "blockHash": "0x5fbf39a1b72dddd616bdfb2b03cb63532b6bc1520d9892476b8d2c0963286f67",
+   "blockNumber": "0x69a049f",
+   "blockTimestamp": "0x6ac39d92",
+   "transactionHash": "0xabfbeec88125e16bffe0db82cb5ec2c1ac71ea0ffcd0625571e720527bd5109a",
+   "transactionIndex": "0x2",
+   "logIndex": "0x1",
+   "removed": false
+  },
+  {
+   "blockId": "0xa46e8b90713950b06abca9588d2e3a5c7e1b3c2b7af5ad9672785c9f9bf14484",
+   "commitState": "Finalized",
+   "address": "0x80c74517bcc2d67ffe02d3ed886796272f647210",
+   "topics": [
+    "0x6476666cab413f11b18e577a4cfe665b8656a110fc88fc55ede5c55e9644f2e8"
+   ],
+   "data": "0x86a4b31d776e03e3e3d2088e03e3d7bd9ad7041f84a7a3cd834d024fbca1fffe000000000000000308608e8efb7c0ce8d6d1b9310ce883e94d0d0ce8843048b0",
+   "blockHash": "0x5fbf39a1b72dddd616bdfb2b03cb63532b6bc1520d9892476b8d2c0963286f67",
+   "blockNumber": "0x69a049f",
+   "blockTimestamp": "0x6ac39d92",
+   "transactionHash": "0xabfbeec88125e16bffe0db82cb5ec2c1ac71ea0ffcd0625571e720527bd5109a",
+   "transactionIndex": "0x2",
+   "logIndex": "0x2",
+   "removed": false
+  }
+ ]
+}
