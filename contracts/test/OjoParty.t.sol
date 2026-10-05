@@ -345,8 +345,8 @@ contract OjoPartyTest is Helpers {
 
     function test_spray_expiredPartyReverts() public {
         uint64 closesAt = _defaultParty(ID, 1);
-        OjoParty.Auth memory a = _mkAuth(ID, 0, LABEL, 1, 1e6);
         vm.warp(closesAt - 1);
+        OjoParty.Auth memory a = _mkAuth(ID, 0, LABEL, 1, 1e6); // signed after the warp so the token window is open
         party.spray(ID, 0, LABEL, 1, a); // last second still works
         vm.warp(closesAt);
         OjoParty.Auth memory b = _mkAuth(ID, 0, LABEL, 2, 1e6);
