@@ -1,0 +1,10 @@
+# Spike 5: gas cost per spray (ESTIMATE, charged on gas limit)
+# gas price 102 gwei (cast gas-price, 2026-10-05), MON $0.03150461 (CoinGecko, 2026-10-05)
+# token-call gas is MEASURED (spikes/01-erc3009.output.txt); the 87,000 of other gas is an estimate until OjoParty exists (Phase 1)
+
+┌─────────┬────────┬──────────────┬──────────┬──────────┬─────────────┬─────────────┬───────────────┬────────────┐
+│ (index) │ token  │ tokenCallGas │ estTxGas │ gasLimit │ monPerSpray │ usdPerSpray │ centsPerSpray │ usdPer1000 │
+├─────────┼────────┼──────────────┼──────────┼──────────┼─────────────┼─────────────┼───────────────┼────────────┤
+│ 0       │ 'AUSD' │ 137694       │ 224694   │ 248000   │ '0.02530'   │ '0.00080'   │ '0.080'       │ '0.80'     │
+│ 1       │ 'USDC' │ 187789       │ 274789   │ 303000   │ '0.03091'   │ '0.00097'   │ '0.097'       │ '0.97'     │
+└─────────┴────────┴──────────────┴──────────┴──────────┴─────────────┴─────────────┴───────────────┴────────────┘
